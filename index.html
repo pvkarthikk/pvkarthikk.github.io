@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pvkarthikk — Software Architect &amp; Embedded Systems Engineer</title>
+  <meta name="description" content="Software architect and embedded systems engineer building resilient, privacy-respecting software—from V2X and IoT systems to Illam, a local-first household app.">
+  <link rel="canonical" href="https://pvkarthikk.github.io/">
+  <meta name="theme-color" content="#FAFAFA">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23059669'/%3E%3Cpath d='M20 44V20h11a8 8 0 0 1 0 16h-5' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="pvkarthikk — Software Architect &amp; Embedded Systems Engineer">
+  <meta property="og:description" content="Resilient systems, from embedded machine protocols to local-first apps.">
+  <meta property="og:url" content="https://pvkarthikk.github.io/">
+  <meta name="twitter:card" content="summary">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var dark = stored === 'dark' || (stored !== 'light' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var theme = dark ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', dark ? '#0B0F14' : '#FAFAFA');
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <noscript>
+    <style>
+      .theme-toggle,
+      .nav-toggle { display: none !important; }
+
+      @media (max-width: 820px) {
+        .header__inner { flex-wrap: wrap; padding-block: 10px; }
+        .header__actions { width: 100%; }
+        .site-nav { display: flex; flex-wrap: wrap; width: 100%; gap: 2px; }
+        .site-nav a { padding: 6px 8px; }
+      }
+    </style>
+  </noscript>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#top" aria-label="pvkarthikk — back to top">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+            <path d="M5 17 12 5l7 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="19" r="1.6" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand__name">pvkarthikk</span>
+      </a>
+
+      <div class="header__actions">
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="#work">Featured Work</a>
+          <a href="#open-source">Open Source</a>
+          <a href="#focus">Engineering Focus</a>
+          <a href="#contact">Contact</a>
+          <a class="site-nav__external" href="https://github.com/pvkarthikk" target="_blank" rel="noopener noreferrer">
+            GitHub
+            <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true">
+              <path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </nav>
+
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle light and dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero__inner">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Software Architect &amp; Embedded Systems Engineer</p>
+        <h1 class="hero__title">Engineering resilient <span class="nowrap">systems—from</span> embedded machine protocols to local-first apps.</h1>
+        <p class="hero__sub">Software architect and builder focused on reliable, privacy-respecting software that works offline, respects hardware constraints, and solves everyday problems without unnecessary cloud bloat.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#work">
+            View Projects
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="none" aria-hidden="true">
+              <path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="btn btn--secondary" href="https://github.com/pvkarthikk" target="_blank" rel="noopener noreferrer">
+            GitHub Profile
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="none" aria-hidden="true">
+              <path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <dl class="hero-specs" aria-label="Engineering profile">
+          <div class="hero-spec">
+            <dt>Architecture</dt>
+            <dd>Local-first · offline-capable</dd>
+          </div>
+          <div class="hero-spec">
+            <dt>Sync</dt>
+            <dd>CRDT + hybrid logical clocks</dd>
+          </div>
+          <div class="hero-spec">
+            <dt>Domain</dt>
+            <dd>V2X · embedded · IoT</dd>
+          </div>
+          <div class="hero-spec">
+            <dt>Default</dt>
+            <dd>Private &amp; user-owned</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head section-head--compact">
+          <p class="section-label"><span>01</span>Featured work</p>
+          <p class="section-note">Designed, built, and shipped end-to-end.</p>
+        </div>
+
+        <article class="featured">
+          <div class="featured__body">
+            <span class="badge">
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true">
+                <path d="M8 1.5 9.6 6l4.4 1.6L9.6 9.2 8 13.7 6.4 9.2 2 7.6 6.4 6 8 1.5Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+              </svg>
+              Featured Open-Source Product
+            </span>
+
+            <div>
+              <p class="featured__tamil" lang="ta">இல்லம்</p>
+              <h2 class="featured__title">Illam — Local-First Household Management</h2>
+            </div>
+
+            <p class="featured__desc">An open-source Android application that keeps daily family routines organized—shared todos, grouped shopping lists, household expenses (₹), meal planning, and staff attendance &amp; payroll—synchronizing peer-to-peer over home Wi-Fi using CRDTs with zero cloud accounts, ads, or subscriptions.</p>
+
+            <ul class="tags" aria-label="Technology stack">
+              <li class="tag">Flutter</li>
+              <li class="tag">Dart</li>
+              <li class="tag">Drift / Encrypted SQLite</li>
+              <li class="tag">CRDT / HLC Sync</li>
+              <li class="tag">mDNS</li>
+              <li class="tag">Android</li>
+            </ul>
+
+            <div class="featured__links">
+              <a class="btn btn--primary" href="https://pvkarthikk.github.io/illam-app/" target="_blank" rel="noopener noreferrer">
+                Product Landing Page
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true">
+                  <path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="btn btn--secondary" href="https://github.com/pvkarthikk/illam-app" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a class="text-link" href="https://github.com/pvkarthikk/illam-app/releases/latest" target="_blank" rel="noopener noreferrer">
+                Latest APK Release
+                <svg viewBox="0 0 16 16" width="13" height="13" fill="none" aria-hidden="true">
+                  <path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="featured__preview" aria-hidden="true">
+            <div class="app-window">
+              <div class="app-window__head">
+                <div class="app-brand">
+                  <span class="app-logo">இ</span>
+                  <span>
+                    <strong>Illam</strong>
+                    <span>Home · 3 members</span>
+                  </span>
+                </div>
+                <span class="app-pill">Local-only</span>
+              </div>
+              <div class="app-body">
+                <div class="app-row">
+                  <span class="app-check app-check--done">
+                    <svg viewBox="0 0 12 12" width="8" height="8" fill="none"><path d="m2.5 6 2.2 2.2 4.8-4.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span class="app-row__label">Groceries</span>
+                  <span class="app-row__meta">4 items</span>
+                </div>
+                <div class="app-row">
+                  <span class="app-check"></span>
+                  <span class="app-row__label">Weeknight dinners</span>
+                  <span class="app-row__meta">3 planned</span>
+                </div>
+                <div class="app-row">
+                  <span class="app-check app-check--done">
+                    <svg viewBox="0 0 12 12" width="8" height="8" fill="none"><path d="m2.5 6 2.2 2.2 4.8-4.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span class="app-row__label">Staff attendance</span>
+                  <span class="app-row__meta">2 present</span>
+                </div>
+                <div class="app-row app-row--money">
+                  <span class="app-row__label">Household expenses</span>
+                  <span class="app-row__amount">₹12,450</span>
+                </div>
+              </div>
+              <div class="app-footer">
+                <span class="app-dot"></span>
+                Peer sync · Wi-Fi · no cloud
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="systems">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-label"><span>02</span>Selected systems</p>
+          <div>
+            <h2>Where low-level reliability meets everyday software.</h2>
+            <p class="section-intro">Three engineering domains that shape how I design products—from deterministic protocols to telemetry at the edge.</p>
+          </div>
+        </div>
+
+        <div class="systems-grid">
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="21" height="21" fill="none">
+                  <path d="M4 20V9l8-5 8 5v11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M9 20v-5h6v5M8 9h.01M12 9h.01M16 9h.01M8 12h.01M16 12h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="status-pill">In progress</span>
+            </div>
+            <h3>Apartment &amp; Society Management Platform</h3>
+            <p>Open-source community management software tailored for residential apartment complexes (125+ flats), streamlining resident coordination, maintenance tracking, and transparent operations.</p>
+            <div class="mini-tags">
+              <span>Community software</span>
+              <span>125+ flats</span>
+            </div>
+          </article>
+
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="21" height="21" fill="none">
+                  <path d="M4 16v-3l2.2-4h8.1l3.2 4v3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M3 16h18M5 16v2.5M19 16v2.5M9 9v3.5M15 9v3.5M6 12.5h11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                  <circle cx="7.5" cy="17.5" r="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="16.5" cy="17.5" r="1.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span class="status-pill">Research &amp; applied</span>
+            </div>
+            <h3>V2X &amp; Heavy Machinery Communication Systems</h3>
+            <p>Research and embedded software engineering focused on vehicle-to-everything (V2X) operational conditioning and deterministic vehicle communication protocols.</p>
+            <div class="mini-tags">
+              <span>V2X</span>
+              <span>Embedded C/C++</span>
+            </div>
+          </article>
+
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="21" height="21" fill="none">
+                  <path d="M5 17a8 8 0 1 1 14 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M6.5 12.5l1 1M12 9v1.5M17.5 12.5l-1 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                  <path d="M12 17l3-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="12" cy="17" r="1.3" fill="currentColor"/>
+                  <path d="M3 21h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="status-pill">Embedded telemetry</span>
+            </div>
+            <h3>IoT Smart Metering &amp; Microgrid Telemetry</h3>
+            <p>Embedded telemetry and remote monitoring architectures for smart energy meters, microgrids, and industrial control displays.</p>
+            <div class="mini-tags">
+              <span>IoT</span>
+              <span>Monitoring</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="open-source">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-label"><span>03</span>Open source</p>
+          <div>
+            <h2>Public repositories, pulled live from GitHub.</h2>
+            <p class="section-intro">Tools, experiments, and products—rendered from the GitHub API with a saved snapshot for instant, resilient delivery.</p>
+          </div>
+        </div>
+
+        <div class="repo-toolbar">
+          <div class="filters" id="repo-filters" role="group" aria-label="Filter repositories by language"></div>
+          <p class="repo-status">
+            <span class="repo-status__dot" aria-hidden="true"></span>
+            <span id="repo-status" role="status" aria-live="polite">Showing a saved snapshot.</span>
+          </p>
+        </div>
+
+        <div class="repo-grid" id="repo-grid">
+          <article class="repo-card" data-language="Dart">
+            <div class="repo-card__head">
+              <h3 class="repo-card__title"><a href="https://github.com/pvkarthikk/illam-app" target="_blank" rel="noopener noreferrer">illam-app</a></h3>
+              <span class="repo-card__ext" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <p class="repo-card__desc">Local-first household management for everyday peace of mind. Syncs todos, shopping lists, expenses, meal plans, and staff attendance peer-to-peer over home Wi-Fi—no cloud required.</p>
+            <div class="repo-card__meta">
+              <span class="repo-lang"><span class="lang-dot" style="--dot:#00B4AB"></span>Dart</span>
+              <span class="repo-stat"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M8 1.8 9.8 5.6l4.2.6-3 3 .7 4.2L8 11.4l-3.7 2-.7-4.2-3-3 4.2-.6L8 1.8Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>1</span>
+              <span>Nov 2026</span>
+            </div>
+            <div class="repo-card__links">
+              <a class="repo-link" href="https://github.com/pvkarthikk/illam-app" target="_blank" rel="noopener noreferrer">Source code <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <a class="repo-link" href="https://pvkarthikk.github.io/illam-app/" target="_blank" rel="noopener noreferrer">GitHub Pages <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <article class="repo-card" data-language="Python">
+            <div class="repo-card__head">
+              <h3 class="repo-card__title"><a href="https://github.com/pvkarthikk/software_defined_test_bench" target="_blank" rel="noopener noreferrer">software_defined_test_bench</a></h3>
+              <span class="repo-card__ext" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <p class="repo-card__desc">Bridge the gap between AI agents and physical hardware. A Software-Defined Test Bench framework to automate bench testing via natural language.</p>
+            <div class="repo-card__meta">
+              <span class="repo-lang"><span class="lang-dot" style="--dot:#3572A5"></span>Python</span>
+              <span class="repo-stat"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M8 1.8 9.8 5.6l4.2.6-3 3 .7 4.2L8 11.4l-3.7 2-.7-4.2-3-3 4.2-.6L8 1.8Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>0</span>
+              <span>May 2026</span>
+            </div>
+            <div class="repo-card__links">
+              <a class="repo-link" href="https://github.com/pvkarthikk/software_defined_test_bench" target="_blank" rel="noopener noreferrer">Source code <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <article class="repo-card" data-language="C++">
+            <div class="repo-card__head">
+              <h3 class="repo-card__title"><a href="https://github.com/pvkarthikk/sdtb_ecu" target="_blank" rel="noopener noreferrer">sdtb_ecu</a></h3>
+              <span class="repo-card__ext" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <p class="repo-card__desc">Arduino R4 Minima source code for an engine ECU: engine speed calculation, dynamic fuel injection, and overheat protection, built for testing with the SDTB project.</p>
+            <div class="repo-card__meta">
+              <span class="repo-lang"><span class="lang-dot" style="--dot:#F34B7D"></span>C++</span>
+              <span class="repo-stat"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M8 1.8 9.8 5.6l4.2.6-3 3 .7 4.2L8 11.4l-3.7 2-.7-4.2-3-3 4.2-.6L8 1.8Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>0</span>
+              <span>Apr 2026</span>
+            </div>
+            <div class="repo-card__links">
+              <a class="repo-link" href="https://github.com/pvkarthikk/sdtb_ecu" target="_blank" rel="noopener noreferrer">Source code <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <article class="repo-card" data-language="C++">
+            <div class="repo-card__head">
+              <h3 class="repo-card__title"><a href="https://github.com/pvkarthikk/subprocess_manager" target="_blank" rel="noopener noreferrer">subprocess_manager</a></h3>
+              <span class="repo-card__ext" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <p class="repo-card__desc">A simple and convenient way to manage subprocesses in C++.</p>
+            <div class="repo-card__meta">
+              <span class="repo-lang"><span class="lang-dot" style="--dot:#F34B7D"></span>C++</span>
+              <span class="repo-stat"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M8 1.8 9.8 5.6l4.2.6-3 3 .7 4.2L8 11.4l-3.7 2-.7-4.2-3-3 4.2-.6L8 1.8Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>1</span>
+              <span>Jul 2025</span>
+            </div>
+            <div class="repo-card__links">
+              <a class="repo-link" href="https://github.com/pvkarthikk/subprocess_manager" target="_blank" rel="noopener noreferrer">Source code <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <article class="repo-card" data-language="C++">
+            <div class="repo-card__head">
+              <h3 class="repo-card__title"><a href="https://github.com/pvkarthikk/pipe_manager" target="_blank" rel="noopener noreferrer">pipe_manager</a></h3>
+              <span class="repo-card__ext" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <p class="repo-card__desc">A simple and convenient way to manage multiple pipes in C++.</p>
+            <div class="repo-card__meta">
+              <span class="repo-lang"><span class="lang-dot" style="--dot:#F34B7D"></span>C++</span>
+              <span class="repo-stat"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M8 1.8 9.8 5.6l4.2.6-3 3 .7 4.2L8 11.4l-3.7 2-.7-4.2-3-3 4.2-.6L8 1.8Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>0</span>
+              <span>Aug 2024</span>
+            </div>
+            <div class="repo-card__links">
+              <a class="repo-link" href="https://github.com/pvkarthikk/pipe_manager" target="_blank" rel="noopener noreferrer">Source code <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <article class="repo-card" data-language="Python">
+            <div class="repo-card__head">
+              <h3 class="repo-card__title"><a href="https://github.com/pvkarthikk/sqlite2csv" target="_blank" rel="noopener noreferrer">sqlite2csv</a></h3>
+              <span class="repo-card__ext" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <p class="repo-card__desc">No description yet — explore the source code on GitHub.</p>
+            <div class="repo-card__meta">
+              <span class="repo-lang"><span class="lang-dot" style="--dot:#3572A5"></span>Python</span>
+              <span class="repo-stat"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M8 1.8 9.8 5.6l4.2.6-3 3 .7 4.2L8 11.4l-3.7 2-.7-4.2-3-3 4.2-.6L8 1.8Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>0</span>
+              <span>Dec 2022</span>
+            </div>
+            <div class="repo-card__links">
+              <a class="repo-link" href="https://github.com/pvkarthikk/sqlite2csv" target="_blank" rel="noopener noreferrer">Source code <svg viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+        </div>
+
+        <p class="repo-more">
+          <a class="text-link" href="https://github.com/pvkarthikk?tab=repositories" target="_blank" rel="noopener noreferrer">
+            View all repositories on GitHub
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="focus">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-label"><span>04</span>Engineering principles</p>
+          <div>
+            <h2>Built on constraints, not conveniences.</h2>
+            <p class="section-intro">The same discipline I apply to embedded systems goes into consumer software: predictable, private, and resilient by design.</p>
+          </div>
+        </div>
+
+        <div class="principles">
+          <article class="principle">
+            <p class="principle__num">01 / Architecture</p>
+            <h3>Local-First &amp; Offline Resilience</h3>
+            <p>Designing software that operates instantaneously without fragile cloud dependencies.</p>
+          </article>
+          <article class="principle">
+            <p class="principle__num">02 / Trust</p>
+            <h3>Privacy &amp; Ownership by Default</h3>
+            <p>Hardware-backed encryption, zero tracking SDKs, and user-controlled data portability.</p>
+          </article>
+          <article class="principle">
+            <p class="principle__num">03 / Discipline</p>
+            <h3>Systems-Level Reliability</h3>
+            <p>Applying deterministic state synchronization and embedded-grade discipline to consumer software.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact__panel">
+          <div class="contact__copy">
+            <p class="section-label"><span>05</span>Contact</p>
+            <h2>Building something that has to work when the network doesn’t?</h2>
+            <p>I’m interested in conversations about embedded systems, protocol reliability, local-first architecture, and product engineering. The best place to reach me is GitHub.</p>
+          </div>
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="https://github.com/pvkarthikk" target="_blank" rel="noopener noreferrer">
+              Connect on GitHub
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--secondary" href="https://pvkarthikk.github.io/illam-app/" target="_blank" rel="noopener noreferrer">Explore Illam</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer__inner">
+      <a class="footer__brand" href="#top" aria-label="pvkarthikk — back to top">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+            <path d="M5 17 12 5l7 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="19" r="1.6" fill="currentColor"/>
+          </svg>
+        </span>
+        <span>
+          <strong>pvkarthikk</strong>
+          <span>Software architect &amp; builder.</span>
+        </span>
+      </a>
+
+      <nav class="footer__links" aria-label="Footer">
+        <a href="https://github.com/pvkarthikk" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://pvkarthikk.github.io/illam-app/" target="_blank" rel="noopener noreferrer">Illam Product Page</a>
+        <a href="#top">Back to top ↑</a>
+      </nav>
+
+      <div class="footer__bottom">
+        <p>© 2026 pvkarthikk. All rights reserved.</p>
+        <p>No trackers · No cookies · Hosted on GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "pvkarthikk",
+      "url": "https://pvkarthikk.github.io/",
+      "jobTitle": "Software Architect & Embedded Systems Engineer",
+      "sameAs": ["https://github.com/pvkarthikk"]
+    }
+  </script>
+</body>
+</html>
